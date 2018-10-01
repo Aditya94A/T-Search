@@ -14,18 +14,24 @@
  * limitations under the License.
  */
 
-group 'com.adityaanand'
-version '0.1-SNAPSHOT'
+package com.adityaanand.t_search.adapters.yts;
 
-apply plugin: 'java'
+import com.adityaanand.t_search.model.category.Category;
 
+final class CategoryMapper {
+    private CategoryMapper() {
+    }
 
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    static Category getByName(String category) {
+        switch (category) {
+            case "720p":
+                return Category.VIDEO_MOVIES;
+            case "1080p":
+                return Category.VIDEO_MOVIES_HD;
+            case "3D":
+                return Category.VIDEO_MOVIES_3D;
+            default:
+                return Category.ALL;
+        }
+    }
 }

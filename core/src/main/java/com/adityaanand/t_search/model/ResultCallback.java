@@ -14,18 +14,9 @@
  * limitations under the License.
  */
 
-group 'com.adityaanand'
-version '0.1-SNAPSHOT'
-
-apply plugin: 'java'
+package com.adityaanand.t_search.model;
 
 
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+public interface ResultCallback {
+    void apply(SearchResult result);
 }

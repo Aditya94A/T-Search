@@ -14,18 +14,16 @@
  * limitations under the License.
  */
 
-group 'com.adityaanand'
-version '0.1-SNAPSHOT'
+package com.adityaanand.t_search.adapters.rarbg;
 
-apply plugin: 'java'
+final class TokenResponse {
+    private final String token;
 
+    public TokenResponse(String token) {
+        this.token = token;
+    }
 
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    String getToken() {
+        return token;
+    }
 }

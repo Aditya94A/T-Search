@@ -14,18 +14,15 @@
  * limitations under the License.
  */
 
-group 'com.adityaanand'
-version '0.1-SNAPSHOT'
+package com.adityaanand.t_search.adapters;
 
-apply plugin: 'java'
+import com.adityaanand.t_search.model.ResultCallback;
+import com.adityaanand.t_search.model.SearchResult;
 
+import javax.annotation.Nullable;
+import java.io.IOException;
+import java.util.Collection;
 
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+public interface SearchAdapter {
+    Collection<SearchResult> search(String searchString, @Nullable ResultCallback callback) throws IOException, InterruptedException;
 }
