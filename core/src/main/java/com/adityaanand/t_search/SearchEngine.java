@@ -67,4 +67,7 @@ public class SearchEngine {
         requestExecutor.shutdown();
         requestExecutor.shutdownNow();
     }
+    public boolean isShutdown() {
+        return requestExecutor.isShutdown();
+    }
 }
